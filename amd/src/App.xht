@@ -8,11 +8,17 @@ Name: <input type="text" :value={name} />
 <button @click={active=true}>Load component</button>
 <hr/>
 
-{#await active && import('./Child.xht')}
-    pending...
-{:then Component}
-    Result:
-    <component:{Component.default} {name} />
-{:catch error}
-    Error {error}
-{/await}
+<div class="child">
+    {#await active && import('./Child.xht')}
+        pending...
+    {:then Component}
+        Result:
+        <component:{Component.default} {name} />
+    {:catch error}
+        Error {error}
+    {/await}
+</div>
+
+<style>
+    .child {border: 1px dotted red; padding: 4px;}
+</style>

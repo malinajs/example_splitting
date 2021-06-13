@@ -8,9 +8,9 @@
   },
   "license": "MIT",
   "devDependencies": {
-    "malinajs": "0.6.23",
     "@rollup/plugin-node-resolve": "^10.0.0",
     "derver": "^0.2.2",
+    "malinajs": "0.6.26",
     "rollup": "^2.33.1",
     "rollup-plugin-css-only": "^3.1.0"
   }
